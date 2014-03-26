@@ -11,7 +11,7 @@ from .model.utils import _get_session
 
 JSON, HTML = range(2)
 JSON_CONTENT_TYPES = set(['application/json',])
-HTML_CONTENT_TYPES = set(['text/html', 'application/x-www-form-urlencoded'])
+HTML_CONTENT_TYPES = set(['text/html', 'application/x-www-form-urlencoded', 'application/x-www-form-urlencoded; charset=UTF-8;'])
 ALL_CONTENT_TYPES = set(['*/*'])
 ACCEPTABLE_CONTENT_TYPES = (JSON_CONTENT_TYPES | HTML_CONTENT_TYPES
         | ALL_CONTENT_TYPES)
@@ -21,7 +21,7 @@ FORBIDDEN_EXCEPTION_MESSAGE = """Method [{}] not acceptable for resource \
 type [{}].  Acceptable methods: [{}]"""
 UNSUPPORTED_CONTENT_TYPE_MESSAGE = """Content-type [{}] not supported.
 Supported values for 'Content-type': {}""".format(
-        str(ACCEPTABLE_CONTENT_TYPES), '{}')
+        '{}', str(ACCEPTABLE_CONTENT_TYPES))
 
 def _perform_database_action(action, *args):
     """Call session.*action* with the given *args*.
