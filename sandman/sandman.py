@@ -11,7 +11,7 @@ from .model.utils import _get_session
 
 JSON, HTML = range(2)
 JSON_CONTENT_TYPES = set(['application/json',])
-HTML_CONTENT_TYPES = set(['text/html', 'application/x-www-form-urlencoded', 'application/x-www-form-urlencoded; charset=UTF-8;'])
+HTML_CONTENT_TYPES = set(['text/html', 'application/x-www-form-urlencoded', 'application/x-www-form-urlencoded; charset=UTF-8'])
 ALL_CONTENT_TYPES = set(['*/*'])
 ACCEPTABLE_CONTENT_TYPES = (JSON_CONTENT_TYPES | HTML_CONTENT_TYPES
         | ALL_CONTENT_TYPES)
